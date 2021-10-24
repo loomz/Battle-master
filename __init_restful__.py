@@ -8,10 +8,9 @@ app = Bottle()
 
 this_dir = os.path.dirname(os.path.abspath(__file__))
 with open("{}/swagger.yml".format(this_dir)) as f:
-    swagger_def = yaml.load(f)
+    swagger_def = yaml.load(f, Loader=yaml.SafeLoader)
 
-app.install(SwaggerPlugin(swagger_def,serve_swagger_ui=True,
-                invoke_before_spec_and_ui=lambda: None))
+app.install(SwaggerPlugin(swagger_def,serve_swagger_schema=True))
 
 session_opts = {
    'session.type':'file',              #以文件的方式保存session
@@ -20,10 +19,9 @@ session_opts = {
    'session.auto':True               #自动保存session
     }
 
-@app.get('/')
 @app.get('/index')
 def index():
-    return 'please input your username(your english name) and password(your english name)'
+    return {'code': 0, 'msg': 'please post /login and input your username(your english name) and password(your english name)'}
 
 @app.post('/login')
 def login():

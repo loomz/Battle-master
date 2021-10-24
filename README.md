@@ -10,6 +10,10 @@
 	pip install bottle
 	pip install beaker
 
+    pip insall bravado-core
+    pip install swagger-spec-validator
+    pip install bottle-swagger-2
+
 系统按照一种类似对战游戏的模式设计。
 
 系统运行方法：
