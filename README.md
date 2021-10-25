@@ -10,7 +10,7 @@
 	pip install bottle
 	pip install beaker
 
-    pip insall bravado-core
+    pip install bravado-core
     pip install swagger-spec-validator
     pip install bottle-swagger-2
 
