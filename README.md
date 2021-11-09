@@ -15,7 +15,7 @@
     pip install bottle-swagger-2
 
 如果出现异常：ModuleNotFoundError: No module named 'jsonschema.compat'
-说明安装的依赖jsonschema版本不对，需要卸载安装指定版本 
+说明安装的依赖jsonschema版本不对，需要卸载安装指定版本  
     pip install jsonschema==3.2.0
 
 系统按照一种类似对战游戏的模式设计。
