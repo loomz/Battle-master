@@ -86,4 +86,4 @@ def kill():
 app = SessionMiddleware(app, session_opts)
 
 if __name__ == '__main__':
-    run(app=app, port=12356)
+    run(app=app, port=8087)
