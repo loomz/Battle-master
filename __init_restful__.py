@@ -10,7 +10,7 @@ this_dir = os.path.dirname(os.path.abspath(__file__))
 with open("{}/swagger.yml".format(this_dir)) as f:
     swagger_def = yaml.load(f, Loader=yaml.SafeLoader)
 
-app.install(SwaggerPlugin(swagger_def,serve_swagger_schema=True))
+app.install(SwaggerPlugin(swagger_def,serve_swagger_schema=True, serve_swagger_ui=True))
 
 session_opts = {
    'session.type':'file',              #以文件的方式保存session
